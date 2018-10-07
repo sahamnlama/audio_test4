@@ -16,7 +16,9 @@ console.log('Listening on port 5000');
 io = socketIO(server);
 
 app.get('/s', function (req, res) {
-  res.send('sender.html')
+  //res.send('sender.html')
+
+  res.sendfile(__dirname + '/sender.html');
 })
 
 io.on('connection', function (socket) {
