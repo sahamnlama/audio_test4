@@ -13,8 +13,8 @@ navigator.getUserMedia  = navigator.getUserMedia ||
                           navigator.mozGetUserMedia ||
                           navigator.msGetUserMedia;
 
-var port = process.env.PORT||5000;
-var socket = io.connect('http://localhost:'+port);
+//var port = process.env.PORT||5000;
+var socket = io.connect('https://audioapp4.herokuapp.com:5000);
 
 var pc = new peerConnection({ iceServers: [{ url: "stun:stun.services.mozilla.com",
      username: 'myuser',

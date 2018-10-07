@@ -6,12 +6,18 @@ var express = require('express'),
 
 app.use(express.static(__dirname));
 
+
+
 server = http.Server(app);
-server.listen(5000);
+server.listen(process.env.PORT||5000);
 
 console.log('Listening on port 5000');
 
 io = socketIO(server);
+
+app.get('/s', function (req, res) {
+  res.send('sender.html')
+})
 
 io.on('connection', function (socket) {
 
