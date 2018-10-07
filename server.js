@@ -21,6 +21,12 @@ app.get('/s', function (req, res) {
   res.sendfile(__dirname + '/sender.html');
 })
 
+app.get('/r', function (req, res) {
+  //res.send('sender.html')
+
+  res.sendfile(__dirname + '/reciever.html');
+})
+
 io.on('connection', function (socket) {
 
     socket.on('make-offer', function (data) {
