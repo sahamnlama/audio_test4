@@ -2,6 +2,7 @@ var answersFrom = {};
 
 navigator.getUserMedia({ audio: true }, function (stream) {
     pc.addStream(stream);
+    console.log("a");
 }, error);
 
 function createOffer () {
